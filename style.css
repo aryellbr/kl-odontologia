@@ -55,7 +55,6 @@ nav a {
 
 .hero p {
   margin: 10px 0 20px;
-  font-size: clamp(14px, 2vw, 18px);
 }
 
 /* BOTÕES */
@@ -73,12 +72,12 @@ nav a {
   background: #25d366;
   color: white;
   margin-top: 15px;
+  transition: 0.2s;
 }
 
 .whatsapp-btn:hover {
   background: #1ebe5d;
   transform: scale(1.05);
-  transition: 0.2s;
 }
 
 /* SEÇÕES */
@@ -91,19 +90,43 @@ nav a {
   background: white;
 }
 
-/* GRID RESPONSIVO */
+/* GRID SERVIÇOS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
   margin-top: 30px;
 }
 
-.card {
+/* CARD SERVIÇOS NOVO */
+.service-card {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.service-card .icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  color: #0d6efd;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #5a6b7a;
 }
 
 /* CONTATO */
@@ -133,9 +156,8 @@ footer {
   color: white;
 }
 
-/* 📱 RESPONSIVO MOBILE */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-
   .header {
     flex-direction: column;
     gap: 10px;
@@ -153,9 +175,5 @@ footer {
 
   .section {
     padding: 40px 15px;
-  }
-
-  .card {
-    padding: 15px;
   }
 }
